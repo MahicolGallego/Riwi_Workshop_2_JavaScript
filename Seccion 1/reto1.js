@@ -43,7 +43,7 @@ while (!dataCorrect) {
   }
 }
 
-console.log(costPerDay * tripDurationDays);
+// console.log(costPerDay * tripDurationDays);
 
 alert(
   `${
