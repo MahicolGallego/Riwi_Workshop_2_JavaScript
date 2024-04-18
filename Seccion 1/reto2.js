@@ -13,11 +13,11 @@ const souvenirs = [];
 
 function isNanVerify(message) {
   let dato = NaN;
-  console.log(isNaN(dato));
-  while (isNaN(dato)) {
+  // console.log(isNaN(dato));
+  while (isNaN(dato) || !dato) {
     dato = Number(prompt(message));
-    if (isNaN(dato)) {
-      alert('Por favor, indica tu presupuesto actual con un valor numerico');
+    if (isNaN(dato) || !dato) {
+      alert('Por favor completa con un valor numerico');
     } else {
       return dato;
     }
@@ -31,8 +31,9 @@ while (registerMore) {
 
   do {
     souvenir = prompt('Nombre del souvenir');
+    // console.log(!isNaN(souvenir));
   } while (!isNaN(souvenir));
-
+  // console.log(!isNaN(souvenir));
   alert('tipo de dato correcto');
 
   do {
