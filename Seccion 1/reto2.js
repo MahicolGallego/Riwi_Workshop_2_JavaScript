@@ -76,7 +76,7 @@ while (registerMore) {
 
 currentBudget = isNanVerify('Por favor indica tu presupuesto actual');
 
-souvenirs.forEach((element,index) => {
+souvenirs.forEach((element, index) => {
   if (element.available === true) {
     showSouvenirsAvailableMssg += `${index}. Souvenir: ${element.name}\nCosto: ${element.cost}\nDisponiblidad: ${element.available}\n\n`;
   }
@@ -87,19 +87,21 @@ while (payOpt) {
 
   switch (payOpt) {
     case true:
-
       productBuy = isNanVerify(
         `Disponibles para comprar\n\n${showSouvenirsAvailableMssg}\n\nTu presupuesto actual: $${currentBudget}\nIndica el producto que deseas comprar por el numero con el que aparecen en la lista mostrada`
       );
 
-      if (souvenirs[productBuy] &&
+      if (
+        souvenirs[productBuy] &&
         souvenirs[productBuy].available === true &&
         souvenirs[productBuy].cost <= currentBudget
       ) {
         currentBudget -= souvenirs[productBuy].cost;
         alert(`Producto comprado con exito\n${souvenirs[productBuy].name}`);
-      }else{
-        alert("No tienes el dinero suficiente para comprar el producto / La seleccion fue errada / El producto no esta disponible para su compra")
+      } else {
+        alert(
+          'No tienes el dinero suficiente para comprar el producto / La seleccion fue errada / El producto no esta disponible para su compra'
+        );
       }
 
       break;

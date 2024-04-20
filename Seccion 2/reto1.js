@@ -1,3 +1,5 @@
+//Reto 1: La Evaluación de Julian
+
 let lvlEnergy;
 let stateOfWeather;
 let howManyWork;
